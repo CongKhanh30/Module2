@@ -1,6 +1,6 @@
 package section9.exercise1;
 
-public class Calculator {
+public class SimpleCalculator {
     public static int add(int first, int second){
         return first + second;
     }

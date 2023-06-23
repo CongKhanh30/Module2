@@ -17,7 +17,7 @@ public class BanhChung {
             soThanhVien[i] = scanner.nextInt();
         }
 
-        Arrays.sort(soThanhVien); // Sắp xếp mảng số thành viên theo thứ tự tăng dần
+        Arrays.sort(soThanhVien);
 
         int soBanhChungCanThiet = 0;
         int i = 0;

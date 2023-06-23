@@ -1,17 +1,20 @@
 package algorithm.banhChung;
 
 import java.util.Scanner;
+
 public class BanhChung1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.print("Nhập vào số nhóm: ");
         int N = scanner.nextInt();
+        System.out.print("Nhập vào số thành viên của từng nhóm: ");
         int[] groupSizes = new int[N];
         for (int i = 0; i < N; i++) {
             groupSizes[i] = scanner.nextInt();
         }
 
         int minCakes = calculateMinCakes(N, groupSizes);
-        System.out.println(minCakes);
+        System.out.print("Cần số bánh chưng tối thiểu là: " + minCakes);
     }
 
     private static int calculateMinCakes(int N, int[] groupSizes) {

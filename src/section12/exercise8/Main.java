@@ -31,7 +31,6 @@ class BinarySearchTree {
 
 public class Main {
     public static void main(String[] args) {
-        // Tạo cây như trong hình minh họa
         BinarySearchTree tree = new BinarySearchTree();
         tree.root = new Node(4);
         tree.root.left = new Node(2);

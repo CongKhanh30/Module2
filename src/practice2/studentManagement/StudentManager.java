@@ -15,7 +15,7 @@ public class StudentManager {
 
     public void addStudent(Student student) {
         students.add(student);
-        readerAndWriteStudent.writeFile(student);
+        readerAndWriteStudent.writeFile(students);
     }
 
     public void updateStudent(int id, String fullName, int age, String homeTown) {
@@ -24,6 +24,7 @@ public class StudentManager {
                 student.setFullName(fullName);
                 student.setAge(age);
                 student.setHometown(homeTown);
+                readerAndWriteStudent.writeFile(students);
                 return;
             }
         }
@@ -35,7 +36,7 @@ public class StudentManager {
         for (Student student : students) {
             if (student.getId() == id) {
                 students.remove(findIndexById(id));
-                readerAndWriteStudent.writeFile(student);
+                readerAndWriteStudent.writeFile(students);
                 return;
             }
         }

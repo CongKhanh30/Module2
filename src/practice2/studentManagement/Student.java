@@ -41,7 +41,7 @@ public class Student {
         return homeTown;
     }
 
-    public void setHometown(String hometown) {
+    public void setHometown(String homeTown) {
         this.homeTown = homeTown;
     }
 

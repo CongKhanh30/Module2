@@ -34,7 +34,8 @@ public class StudentManager {
 
         for (Student student : students) {
             if (student.getId() == id) {
-                students.remove(student);
+                students.remove(findIndexById(id));
+                readerAndWriteStudent.writeFile(student);
                 return;
             }
         }
@@ -53,7 +54,14 @@ public class StudentManager {
             System.out.println("Không tìm thấy học sinh phù hợp.");
         }
     }
-
+    public int findIndexById(int id) {
+        for (int i = 0; i < students.size(); i++) {
+            if (students.get(i).getId() == id) {
+                return i;
+            }
+        }
+        return -1;
+    }
     public void showAll() {
         for (Student student : students) {
             student.showInformation();

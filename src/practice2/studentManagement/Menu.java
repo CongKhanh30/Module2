@@ -33,6 +33,7 @@ public class Menu {
                 case 1:
                     System.out.println("Nhập thông tin sinh viên:");
                     System.out.print("ID: ");
+
                     int id;
                     while (true) {
                         try {
@@ -42,6 +43,7 @@ public class Menu {
                             System.out.println("Không phải số . Vui lòng nhập lại.");
                         }
                     }
+
                     System.out.print("Họ và tên: ");
                     String fullName = scanner.nextLine();
                     System.out.print("Tuổi: ");

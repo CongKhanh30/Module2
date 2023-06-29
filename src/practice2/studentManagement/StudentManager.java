@@ -12,8 +12,20 @@ public class StudentManager {
         students = new ArrayList<>();
         students = readerAndWriteStudent.readFile();
     }
+    public boolean isIdExists(int id) {
+        for (Student student : students) {
+            if (student.getId() == id) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     public void addStudent(Student student) {
+        if (isIdExists(student.getId())) {
+            System.out.println("ID này đã tồn tại. Nhập ID khác.");
+            return;
+        }
         students.add(student);
         readerAndWriteStudent.writeFile(students);
     }
